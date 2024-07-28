@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famil Eyvazli's Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            display: none;
+        }
+        #main, #about, #contact {
+            display: none;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</head>
+<body onload="showSection('main')">
+    <header>
+        <h1>Famil Eyvazli</h1>
+        <p>Welcome to my personal webpage!</p>
+    </header>
+    <nav>
+        <a href="javascript:void(0);" onclick="showSection('main')">Main</a>
+        <a href="javascript:void(0);" onclick="showSection('about')">About Me</a>
+        <a href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
+    </nav>
+    <div class="container" id="main">
+        <h2>Main</h2>
+        <p>Welcome to my personal webpage. Here you can learn more about me and how to get in touch.</p>
+    </div>
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <p>My name is Famil Eyvazli. I am 17 years old and I live in Baku.</p>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact</h2>
+        <p>You can find me on Instagram: <a href="https://www.instagram.com/thisisfamill" target="_blank">thisisfamill</a></p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Famil Eyvazli</p>
+    </footer>
+</body>
+</html>
